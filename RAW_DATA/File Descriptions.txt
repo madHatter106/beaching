@@ -1,0 +1,40 @@
+This file describes the data fields contained in this repository.  The data fields described below were used during analysis.  All others were ignored either because the data was superfluous or because the data was unreliable.
+
+CC IFAW Mass Stranding Data 1999-2014.csv:
+Mass stranding data for cetaceans on Cape Cod MA, 1999 - 2014.  Courtesy IFAW.  One row of data represents one animal involved in a mass stranding.  Total number of animals in a stranding event equals the number of rows having the same "MASS_STRAND_NUM".
+
+Some location data in the LATITUDE_DEGREE and LONGITUDE_DEGREE columns have errors, e.gs. missing negative sign, misplaced decimal.  Our corrections are in the 'Corrected Latitude' and 'Corrected Longitude' columns.
+
+REPORT_DATE      - Date when stranding reported, yyyy-mm-dd
+COMMENTS         - Free text comments regarding the stranding event.  Unused in analysis.
+MASS_STRAND_NUM  - Text identifier unique to a mass stranding event.  MS##-##
+CONDITION_CODE   - Number indicating the condition of the animal: 1-Live Stranding, 2-Fresh Dead, >=3-Decomposed
+SPECIES          - Species of animal.
+LATITUDE_DEGREE  - Latitude of stranding location.  Units: degrees.  ##.#######
+LONGITUDE_DEGREE - Longitude of stranding location.  Units: degrees.  ##.#######
+Corrected Latitude - Corrected LATITUDE_DEGREE data.
+Corrected Longitude - Corrected LONGITUDE_DEGREE data.
+
+NZ mass stranding data.csv:
+Mass stranding data for cetaceans in New Zealand, 1990 - 2016.  Courtesy NZ DOC.  One row of data represents a group of mass stranded animals.  We standardized date formats and included these dates in the column 'Reformatted Date'.
+
+Strand_IDTest    - Identification number for mass stranding event.
+Date_            - Date when stranding reported.  Format varies.  Generally dd/mm/yyyy or d/m/yy.
+Field_Species_ID - Species of the animals.
+No_Strand        - Number of animals in stranded group.
+Lat              - Latitude of stranding location.  Units: degrees.  ##.####
+Long             - Longitude of stranding location.  Units: degrees.  ##.####
+Comments_General - Free text comments regarding the stranding event.  Unused in analysis.
+Cond_Animal      - Text value indicating the condition of the animals when found.
+Reformatted Date - Reformatted Date_ column values.  dd/mm/yyyy
+
+UK CSIP MSE data 1991-2015.csv:
+Mass stranding data for cetaceans in the United Kingdom, 1991-2015.  Courtesy CSIP.  One row of data represents one animal involved in a mass stranding.  Total number of animals in a stranding event equals the number of rows having the same base string in the "National Reference" field.  To facility identification of separate stranding, we included the base string only in the 'Edited Nat. Ref.' column.
+
+National Reference   - Text string for associating an animal to a mass stranding event.  Format: SWyyyy/mm.a, y-year, mm-mass stranding number, a-animal number.
+Species (scientific) - Species of the animal.
+Date Found           - Date when stranding reported.  mm/dd/yy
+Latitude             - Latitude of stranding location.  Units: degrees.  ##.#######
+Longitude            - Longitude of stranding location.  Units: degrees.  ##.#######
+Condition Found / Stranding Outcome - Text indicating the condition of the animal when found.
+Edited Nat. Ref.     - The National Reference string with the animal number removed. 
